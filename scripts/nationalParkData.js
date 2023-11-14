@@ -6933,17 +6933,40 @@ window.onload = function () {
     };
     // Get parks based on park type
     function displayParksByType(selectedParkType) {
-        let parksByType = nationalParksArray.filter(park => park.type === selectedParkType);
-            displayParks(parksByType);
-
+        let parksByType = nationalParksArray.filter(park => {
+            // Check for keywords
+            const keywords = getKeywordsForParkType(selectedParkType);
+            return keywords.some(keyword => park.LocationName.includes(keyword));
+        });
         // Clear any data
         parksContainer.innerHTML = "";
-        parksByType.foreach(park => {
+        parksByType.forEach(park => {
             let parkEl = document.createElement("div");
             parkEl.textContent = park.LocationName;
             parksContainer.appendChild(parkEl);
-        })
+        });
     };
+    // Get keywords associated with each park type
+function getKeywordsForParkType(parkType) {
+    // Keywords for each park type
+    const keywordMapping = {
+        "National Park": ["National Park"],
+        "National Monument": ["National Monument"],
+        "Recreation Area": ["Recreation Area", "Recreation"],
+        "Scenic Trail": ["Scenic Trail"],
+        "Battlefield": ["Battlefield"],
+        "Historic": ["Historic"],
+        "Memorial": ["Memorial"],
+        "Preserve": ["Preserve"],
+        "Island": ["Island"],
+        "River": ["River"],
+        "Seashore": ["Seashore"],
+        "Trail": ["Trail"],
+        "Parkway": ["Parkway"]
+    };
+
+    return keywordMapping[parkType] || [];
+}
 
 
 
