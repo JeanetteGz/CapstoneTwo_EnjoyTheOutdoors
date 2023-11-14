@@ -1,13 +1,24 @@
 "use strict";
 let selectStatesEl = document.getElementById("select-state");
+let parksContainer = document.getElementById("parks-container");
+let selectParkTypeEl = document.getElementById("park-type");
 
 window.onload = function () {
     populateStateDropdown();
+    populateParkType();
+
+    //Parks In States
     selectStatesEl.onchange = function () {
         let selectedState = selectStatesEl.value;
         console.log("Selected State:", selectedState);
         displayParks(selectedState);
     };
+
+    //Parks By Type
+    selectParkTypeEl.onchange = function () {
+        let selectedParkType = selectParkTypeEl.value;
+        displayParksByType(selectedParkType);
+    }
 };
 
         const nationalParksArray = [
@@ -6871,15 +6882,16 @@ window.onload = function () {
             }
         ];
 
-    // Create a dropdown the populates states/territories
+
+    // Dropdown for states
     function populateStateDropdown() {
-        // Add a default option
+        // Added a default option
         let defaultOption = document.createElement("option");
         defaultOption.text = "Select A State";
         defaultOption.value = "";
         selectStatesEl.add(defaultOption);
 
-        //Get each state
+        // Get each state
         locationsArray.forEach(state => {
             let option = document.createElement("option");
             option.text = state;
@@ -6887,13 +6899,11 @@ window.onload = function () {
             selectStatesEl.add(option);
         })
     };
-
     // Get parks based on state
     function displayParks(selectedState) {
         let parksInSelectedState = nationalParksArray.filter(park => park.State === selectedState);
         console.log("Filtered Parks:", parksInSelectedState);
-        // Display parks
-        let parksContainer = document.getElementById("parks-container");
+        
         // Clear any data
         parksContainer.innerHTML = "";
         parksInSelectedState.forEach(park => {
@@ -6903,4 +6913,37 @@ window.onload = function () {
         })
     };
 
+
+
+    // Dropdown for park type
+    function populateParkType() {
+        // Added default option
+        let defaultOption = document.createElement("option");
+        defaultOption.text = "Select A Park Type";
+        defaultOption.value = "";
+        selectParkTypeEl.add(defaultOption);
+
+        // Get each park type
+        parkTypesArray.forEach(type => {
+            let option = document.createElement("option");
+            option.text = type;
+            option.value = type;
+            selectParkTypeEl.add(option);
+        })
+    };
     // Get parks based on park type
+    function displayParksByType(selectedParkType) {
+        let parksByType = nationalParksArray.filter(park => park.type === selectedParkType);
+            displayParks(parksByType);
+
+        // Clear any data
+        parksContainer.innerHTML = "";
+        parksByType.foreach(park => {
+            let parkEl = document.createElement("div");
+            parkEl.textContent = park.LocationName;
+            parksContainer.appendChild(parkEl);
+        })
+    };
+
+
+
