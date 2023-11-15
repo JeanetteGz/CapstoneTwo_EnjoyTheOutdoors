@@ -10,7 +10,6 @@ window.onload = function () {
     //Parks In States
     selectStatesEl.onchange = function () {
         let selectedState = selectStatesEl.value;
-        console.log("Selected State:", selectedState);
         displayParks(selectedState);
     };
 
@@ -6902,7 +6901,6 @@ window.onload = function () {
     // Get parks based on state
     function displayParks(selectedState) {
         let parksInSelectedState = nationalParksArray.filter(park => park.State === selectedState);
-        console.log("Filtered Parks:", parksInSelectedState);
         
         // Clear any data
         parksContainer.innerHTML = "";
@@ -6935,7 +6933,7 @@ window.onload = function () {
     function displayParksByType(selectedParkType) {
         let parksByType = nationalParksArray.filter(park => {
             // Check for keywords
-            const keywords = getKeywordsForParkType(selectedParkType);
+            let keywords = getKeywordsForParkType(selectedParkType);
             return keywords.some(keyword => park.LocationName.includes(keyword));
         });
         // Clear any data
@@ -6949,7 +6947,7 @@ window.onload = function () {
     // Get keywords associated with each park type
 function getKeywordsForParkType(parkType) {
     // Keywords for each park type
-    const keywordMapping = {
+    let keywordMapping = {
         "National Park": ["National Park"],
         "National Monument": ["National Monument"],
         "Recreation Area": ["Recreation Area", "Recreation"],
