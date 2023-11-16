@@ -1,59 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>National Parks</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/styles/nationalParks.css" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>National Parks</title>
+        <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link href="/styles/nationalParks.css" rel="stylesheet" />
+    </head>
+    <body>
 
-</head>
-<body>
-    <div class="top-image" style="background-image: url('/images/NationalParks/trees-each-other-forest-covered-by-creeping-mist.jpg');">
-        <div class="top-text">National Parks</div>
-    </div>
+        <div class="top-image">
+            <nav class="text-center">
+                <a href="/html/index.html" class="home-link">Home</a>
+            </nav>
+            <div class="top-text-container">
+                <div class="top-text">National</div>
+                <div class="top-text">Parks</div>
+            </div>
+        </div>
 
-    <nav class="text-center">
-        <a href="/html/index.html" class="home-link">Home</a>
-    </nav>
-
-    <div class="container">
-        <div class="row">
-            <!-- First dropdown -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <label for="select-state">Please Select A State/Territory</label>
-                        <select id="select-state" class="form-control"></select>
+        <div class="container">
+            <div class="row">
+                <!-- First dropdown -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <label for="select-state">Please Select A State/Territory</label>
+                            <select id="select-state" class="form-control"></select>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Second dropdown -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <label for="park-type">Please Select A Park type</label>
-                        <select id="park-type" class="form-control"></select>
+                <!-- Second dropdown -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <label for="park-type">Please Select A Park type</label>
+                            <select id="park-type" class="form-control"></select>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Result card -->
-    <div class="container mt-3">
-        <div class="card">
-            <div class="card-body" id="parks-container">
+        <!-- Result card for parks -->
+        <div class="container mt-3">
+            <div class="card">
+                <div class="card-body" id="parks-container"></div>
             </div>
         </div>
-    </div>
 
-    <div class="bottom-image" style="background-image: url('/images/NationalParks/04_copia.jpg');">
-    </div>
+        <div class="bottom-image"></div>
 
-    <script src="/scripts/parkTypeData.js"></script>
-    <script src="/scripts/locationData.js"></script>
-    <script src="/scripts/nationalParkData.js"></script>
-</body>
+        <script src="/scripts/parkTypeData.js"></script>
+        <script src="/scripts/locationData.js"></script>
+        <script src="/scripts/nationalParkData.js"></script>
+        
+        <div class="footer">
+            <p>&copy; 2023 The Greater Outdoors. All rights reserved.</p>
+        </div>
+    </body>
 </html>

@@ -10,14 +10,23 @@ Description:
 ### Home
 This is the landing page for our website and it includes navigation and highlights things poeple can do to enjoy the great outdoors.
 
-![alt text](image.png)
+<p align="center" width="100%">
+    <img width="70%" src="/images/ReadmeImages/">
+</p>
 
 ## National parks
-![alt text](image.png)
+
+
+<p align="center" width="100%">
+    <img width="70%" src="/images/ReadmeImages/">
+</p>
 
 ## Mountains
-![alt text](image.png)
 
+
+<p align="center" width="100%">
+    <img width="70%" src="/images/ReadmeImages/">
+</p>
 ## Interesting Code Snippet
 
 What makes this code interesting is:

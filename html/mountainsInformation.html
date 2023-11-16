@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mountains Information</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/styles/mountainsInformation.css" rel="stylesheet">
-</head>
-<body>
-    <nav class="text-center">
-        <a href="/html/index.html">Home</a>
-    </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mountains Information</title>
+        <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link href="/styles/mountainsInformation.css" rel="stylesheet" />
+    </head>
+    <body>
 
-    <div class="container">
-        <label for="select-mountain">Mountains</label>
-        <select id="select-mountain" class="form-control"></select>
-    </div>
+        <div class="top-image">
+            <nav class="text-center">
+                <a href="/html/index.html" class="home-link">Home</a>
+            </nav>
+            <div class="top-text-container">
+                <div class="top-text">Mountains</div>
+                <div class="top-text">Information</div>
+            </div>
+        </div>
 
-    <div id="mountains-container"></div>
+        <div class="container text-center">
+            <label for="select-mountain">Please Select A Mountain</label>
+            <select id="select-mountain" class="form-control"></select>
+        </div>
 
-    <script src="/scripts/parkTypeData.js"></script>
-    <script src="/scripts/locationData.js"></script>
-    <script src="/scripts/nationalParkData.js"></script>
-    <script src="/scripts/mountainData.js"></script>
-</body>
+        <!-- Result card for mountains -->
+        <div class="container mt-3">
+            <div class="card">
+                <div class="card-body" id="mountains-container"></div>
+            </div>
+        </div>
+
+        <div class="bottom-image"></div>
+
+        <script src="/scripts/parkTypeData.js"></script>
+        <script src="/scripts/locationData.js"></script>
+        <script src="/scripts/nationalParkData.js"></script>
+        <script src="/scripts/mountainData.js"></script>
+        
+        <div class="footer">
+            <p>&copy; 2023 The Greater Outdoors. All rights reserved.</p>
+        </div>
+    </body>
 </html>

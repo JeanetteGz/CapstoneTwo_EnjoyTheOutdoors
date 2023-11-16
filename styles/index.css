@@ -1,5 +1,17 @@
 body {
-    background-color: #254039;
+    background-image: url('/images/NationalParks/04_copia.jpg');
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.learn-more-text {
+    color: black;
+}
+.navbar-nav .nav-link {
+    color: black !important;
 }
 .card {
     border: none;
@@ -26,13 +38,18 @@ body {
     left: 50%;
     transform: translateX(-50%);
     font-size: 50px;
-    color: #fff; /* Arrow color */
+    color: #000000; /* Arrow color */
     cursor: pointer;
 }
 .stretched-img {
     width: 100%;
     height: auto;
 }
-
+.footer {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
 
 
