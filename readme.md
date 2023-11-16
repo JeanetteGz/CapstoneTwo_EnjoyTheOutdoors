@@ -7,7 +7,7 @@ Description:
 
 ## Pages
 
-## Home
+### Home
 This is the landing page for our website and it includes navigation and highlights things poeple can do to enjoy the great outdoors.
 
 ![alt text](image.png)
