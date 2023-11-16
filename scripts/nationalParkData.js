@@ -6965,6 +6965,3 @@ function getKeywordsForParkType(parkType) {
 
     return keywordMapping[parkType] || [];
 }
-
-
-
