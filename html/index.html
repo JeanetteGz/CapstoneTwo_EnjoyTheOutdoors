@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="/styles/index.css" rel="stylesheet">
 </head>
 <body>
     <div class="container-fluid p-0">
         <!-- Navigation Bar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,13 +34,58 @@
                 <h1 class="card-title text-uppercase font-weight-bold">Find Your Next Adventure Here!</h1>
             </div>
         </div>
-    </div>
+
+        <h3 class="text-white text-center mt-4">Learn More Below</h3>
+
+        <!-- Arrow Down -->
+        <div class="arrow-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="/images/Cards/flat-vector-forest-waterfall-illustration.jpg" class="card-img">
+                        <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center">
+                            <h1 class="card-title text-uppercase font-weight-bold text-center">National Parks</h1>
+                        </div>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="/images/Cards/beautiful-mountains-landscape.jpg" class="card-img">
+                        <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center">
+                            <h1 class="card-title text-uppercase font-weight-bold text-center">Mountains</h1>
+                        </div>
+                        <p class="card-text">Nam ultrices sit amet nisl vel interdum. Proin volutpat libero...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function scrollDown() {
+            window.scroll({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
+
 
 
 

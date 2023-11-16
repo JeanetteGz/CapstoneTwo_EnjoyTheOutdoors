@@ -1,7 +1,6 @@
 body {
     background-color: #254039;
 }
-
 .card {
     border: none;
     max-width: 800px;
@@ -11,18 +10,28 @@ body {
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
     position: relative;
 }
-
 .card-img {
     object-fit: cover;
     border-radius: 15px;
 }
-
 .card-title {
     font-size: 3rem;
 }
-
 .card-text {
     font-size: 1.5rem;
+}
+.arrow-down {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    color: #fff; /* Arrow color */
+    cursor: pointer;
+}
+.stretched-img {
+    width: 100%;
+    height: auto;
 }
 
 

@@ -13,16 +13,37 @@
     </nav>
 
     <div class="container">
-        <label for="select-state">Please Select A State/Territory</label>
-        <select id="select-state" class="form-control"></select>
+        <div class="row">
+            <!-- First column with State dropdown -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <label for="select-state">Please Select A State/Territory</label>
+                        <select id="select-state" class="form-control"></select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second column with Park type dropdown -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <label for="park-type">Please Select A Park type</label>
+                        <select id="park-type" class="form-control"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="container">
-        <label for="park-type">Please Select A Park type</label>
-        <select id="park-type" class="form-control"></select>
+    <!-- Result card -->
+    <div class="container mt-3">
+        <div class="card">
+            <div class="card-body" id="parks-container">
+                <!-- Results will be displayed here -->
+            </div>
+        </div>
     </div>
-
-    <div id="parks-container"></div>
 
     <script src="/scripts/parkTypeData.js"></script>
     <script src="/scripts/locationData.js"></script>
