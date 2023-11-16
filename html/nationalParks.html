@@ -6,15 +6,20 @@
     <title>National Parks</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="/styles/nationalParks.css" rel="stylesheet">
+
 </head>
 <body>
+    <div class="top-image" style="background-image: url('/images/NationalParks/trees-each-other-forest-covered-by-creeping-mist.jpg');">
+        <div class="top-text">National Parks</div>
+    </div>
+
     <nav class="text-center">
-        <a href="/html/index.html">Home</a>
+        <a href="/html/index.html" class="home-link">Home</a>
     </nav>
 
     <div class="container">
         <div class="row">
-            <!-- First column with State dropdown -->
+            <!-- First dropdown -->
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
@@ -24,7 +29,7 @@
                 </div>
             </div>
 
-            <!-- Second column with Park type dropdown -->
+            <!-- Second dropdown -->
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
@@ -40,9 +45,11 @@
     <div class="container mt-3">
         <div class="card">
             <div class="card-body" id="parks-container">
-                <!-- Results will be displayed here -->
             </div>
         </div>
+    </div>
+
+    <div class="bottom-image" style="background-image: url('/images/NationalParks/04_copia.jpg');">
     </div>
 
     <script src="/scripts/parkTypeData.js"></script>
